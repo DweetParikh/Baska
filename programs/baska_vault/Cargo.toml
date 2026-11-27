@@ -1,0 +1,31 @@
+[package]
+name = "baska_vault"
+version = "0.1.0"
+description = "Baska v2: on-chain mutual funds of tokenized stocks"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "baska_vault"
+
+[features]
+# `devnet` enables the admin-writable MockPriceFeed oracle. It is on by default
+# until the Pyth reader is added; build mainnet with `--no-default-features`
+# (price reads then fail closed with OracleNotConfigured).
+default = ["devnet"]
+devnet = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+anchor-lang = "1.2.1"
+anchor-spl = "1.2.1"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

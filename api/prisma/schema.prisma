@@ -1,0 +1,79 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Fund {
+  id          Int             @id // on-chain fund id (u64, small in practice)
+  address     String          @unique
+  name        String
+  shareMint   String
+  mgmtFeeBps  Int
+  createdAt   DateTime        @default(now())
+  components  FundComponent[]
+  snapshots   NavSnapshot[]
+  positions   Position[]
+  txs         Tx[]
+}
+
+model FundComponent {
+  id        Int    @id @default(autoincrement())
+  fundId    Int
+  mint      String
+  symbol    String
+  weightBps Int
+  fund      Fund   @relation(fields: [fundId], references: [id], onDelete: Cascade)
+
+  @@unique([fundId, mint])
+}
+
+model NavSnapshot {
+  id          Int      @id @default(autoincrement())
+  fundId      Int
+  navPerShare Decimal  @db.Decimal(24, 6)
+  tvlUsd      Decimal  @db.Decimal(24, 6)
+  totalShares Decimal  @db.Decimal(24, 6)
+  ts          DateTime @default(now())
+  fund        Fund     @relation(fields: [fundId], references: [id], onDelete: Cascade)
+
+  @@index([fundId, ts])
+}
+
+// Derived from events. Only program deposits/redeems are tracked: shares moved
+// by plain SPL transfers between wallets are not reflected here.
+model Position {
+  id        Int     @id @default(autoincrement())
+  wallet    String
+  fundId    Int
+  shares    Decimal @db.Decimal(24, 6)
+  costBasis Decimal @db.Decimal(24, 6) // USDC still "invested": in minus proportional out
+  fund      Fund    @relation(fields: [fundId], references: [id], onDelete: Cascade)
+
+  @@unique([wallet, fundId])
+}
+
+model Tx {
+  id     String   @id // "<signature>:<event index>"
+  sig    String
+  wallet String
+  fundId Int
+  kind   String // deposit | redeem | redeem_in_kind
+  usdc   Decimal  @db.Decimal(24, 6)
+  shares Decimal  @db.Decimal(24, 6)
+  slot   BigInt
+  ts     DateTime
+  fund   Fund     @relation(fields: [fundId], references: [id], onDelete: Cascade)
+
+  @@index([wallet, ts])
+  @@index([sig])
+}
+
+model IndexerState {
+  key   String @id
+  value String
+}

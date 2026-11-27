@@ -1,0 +1,6 @@
+
+> keeper
+> ts-node -P ./tsconfig.json keeper/src/index.ts
+
+{"t":"2026-11-27T10:26:52.725Z","level":"info","msg":"keeper started","keeper":"7s8h584tuxijP8jYDkxZm1azwK9qVbxhGHiizJJPitFK","dryRun":false,"opts":"{\"minIdleUsdc\":\"10000000\",\"maxTradeUsdc\":\"5000000000\",\"driftToleranceBps\":500,\"slippageBps\":50,\"venueFeeBps\":10}"}
+{"t":"2026-11-27T10:26:52.727Z","level":"info","msg":"health endpoint on :8787/keeper/health"}

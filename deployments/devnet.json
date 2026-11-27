@@ -1,0 +1,251 @@
+{
+  "cluster": "devnet",
+  "rpcUrl": "https://api.devnet.solana.com",
+  "programId": "H8RhPUZy8tpL3nJbpvpXwjg8vWFWNfvuT2iF9PcoPrgu",
+  "config": "ipNtXub9fg3Ax14MjgU6X8JHm3umJX2bHEyfmbHKMUa",
+  "usdcMint": "5pPrq2DExdPnPT8x98pvRFoDZfTzXrPzYbVdEX1exeFH",
+  "liquidityAuthority": "BQNBM9MBC1mAt85nP4sh3NwZ5sfDq6X1jrMuWAe8UN1i",
+  "service": {
+    "admin": "G19X8oFazeW4HzWT6y4ZS1HTiVM58wiZAViXSp8qtH7y",
+    "keeper": "7s8h584tuxijP8jYDkxZm1azwK9qVbxhGHiizJJPitFK",
+    "oracle": "sEj2ncQCC79dzgNbVnaVjiyaav7RmWvc9bhCSk8gGDd",
+    "faucet": "Hg2sbZuBTHSuH7iprYft82tecvhZGmmAKszqXLqpCCiR"
+  },
+  "stocks": [
+    {
+      "symbol": "AAPL",
+      "mint": "9DBCjqXmKFMUc8haZAAL7DXmjhvEYrC2aYeeqXqBiGAn",
+      "decimals": 8,
+      "feed": "CPecabx13qmngaU3WCWj6QWymFoBDRRbZfGF3znMxrYx",
+      "baseUsd": 230
+    },
+    {
+      "symbol": "MSFT",
+      "mint": "9RZzJPMFoPfzfG6w7CZ3PR6rVswpGtcEKWn4g1GkZ8U9",
+      "decimals": 8,
+      "feed": "CwoHiWFZRnKieV33ob41nAuoQhW5SfHB81gNVhmQevHq",
+      "baseUsd": 450
+    },
+    {
+      "symbol": "GOOGL",
+      "mint": "BFPEe2PWtvRmNdXWEMeM8j5tiKaPgxD1M1adMw4apxba",
+      "decimals": 8,
+      "feed": "69iCPmw1FVPSd6HrapqQcBTwBKZrCQ76vMYAGi8yZiGZ",
+      "baseUsd": 190
+    },
+    {
+      "symbol": "AMZN",
+      "mint": "5r7urG4o1BHQeST5HuzsytRdnmo5PKZxBTNKzAP2Rneb",
+      "decimals": 8,
+      "feed": "9ZKrgh6phAkCpYsmBrgTYmWdZVciAkvfwggkmT9F9pCb",
+      "baseUsd": 210
+    },
+    {
+      "symbol": "NVDA",
+      "mint": "H5fT3UtbCviJyrPAQQQGzecJhZdaQ5iUbSb4fsx6kcD8",
+      "decimals": 8,
+      "feed": "GFQ34NZAaWZjWwGEf6hox78wy6ramUnUXmsW6NFPHC99",
+      "baseUsd": 140
+    },
+    {
+      "symbol": "META",
+      "mint": "25SCJ8qVBe9ZLFagkbLGyggyM8mrZrHEu85Z2ugfRJJY",
+      "decimals": 8,
+      "feed": "76XqA3WCy7GhGMmmnFaNGWd5QMkqGCGsvYbMSDFFoV7H",
+      "baseUsd": 600
+    },
+    {
+      "symbol": "TSLA",
+      "mint": "9mAaj6k2iRbX7MLy2Hgc6zvseL69XxxNa5RDw1mHd7pX",
+      "decimals": 8,
+      "feed": "C5diku4mwq5TgXmo1fmZsaetoKEUQy64ARMLTXz6658L",
+      "baseUsd": 330
+    },
+    {
+      "symbol": "MU",
+      "mint": "HKPKibCtJH276W1BEbFau6ofyvSRtqGHde9FDiHxyEh8",
+      "decimals": 8,
+      "feed": "BoworthuGD9EkueKZSNQo47i6upREmDm896qsEffD1w8",
+      "baseUsd": 100
+    },
+    {
+      "symbol": "SNDK",
+      "mint": "DgBHRHATfGAcvJgH4raX1jcRTvjQt9wZGykHwAVYfa1p",
+      "decimals": 8,
+      "feed": "FgB6iShRacGcMtoPUH9QuBQcG3Er2GKSUkpPgC99jRM",
+      "baseUsd": 60
+    },
+    {
+      "symbol": "SKHY",
+      "mint": "4F4yXL1jDUQQLkyQ5YSyXBpi1z3GtHd5jc8aVDMr1W8F",
+      "decimals": 8,
+      "feed": "GanbqKVLBNkCHR4sGkTxLhqjjU9vnMxoWbEWyB3eryzQ",
+      "baseUsd": 200
+    },
+    {
+      "symbol": "SPY",
+      "mint": "AwuvVtwq94Qm6JkV6VnJB8SuGyM6BL5ZJsc4ivFYdvYg",
+      "decimals": 8,
+      "feed": "Hf8wmkJ4PLPyH6CeR7yCWDx4tDTgPPKj6rGfqJE4h22y",
+      "baseUsd": 600
+    },
+    {
+      "symbol": "SPCX",
+      "mint": "2F4Wq1QSJfo63w4iV7umcZsLQhvGKSHrttGpmtSW2tnE",
+      "decimals": 8,
+      "feed": "E6Tr9kGHepgfhcxoKRainARQgx9UzdXdS3oL8kAPW3yX",
+      "baseUsd": 25
+    },
+    {
+      "symbol": "RKLB",
+      "mint": "2ViidbsQKaobfZHpGT82uqkEJ7CW6vWzjH6WLJmeqSTp",
+      "decimals": 8,
+      "feed": "A7VAgJyRphgx6jmgVcBe5FV8FTCX3vpD8hxBNaQJqKe3",
+      "baseUsd": 30
+    },
+    {
+      "symbol": "ASTS",
+      "mint": "GSgrTkn2C9tgYnVP9Zs23j8LokEUV36L4mRNeobpLaE",
+      "decimals": 8,
+      "feed": "8AMJHzrLahbUGZi7AKumxKxX4EjUvc746u4CBVob4fCD",
+      "baseUsd": 40
+    }
+  ],
+  "funds": [
+    {
+      "id": 1,
+      "name": "Mag7 Index",
+      "address": "ECARANpeRF337ArEgZgNdksUDjT93j2RFfn4b26eehK2",
+      "shareMint": "4edweB966jpFNae8eEnLmSDZkeF985EgYxpEsWKBCWjY",
+      "usdcVault": "4dXK9BsFXMSdqAvSCduLST2KzRRh9xg14PCC2Bb5ZBXR",
+      "components": [
+        {
+          "symbol": "AAPL",
+          "mint": "9DBCjqXmKFMUc8haZAAL7DXmjhvEYrC2aYeeqXqBiGAn",
+          "vault": "CQfam2CtZ69Za8F8QNQ2Qi3gi9vFGtBmxJmfnCqwR5Fz",
+          "priceFeed": "CPecabx13qmngaU3WCWj6QWymFoBDRRbZfGF3znMxrYx",
+          "targetBps": 1429
+        },
+        {
+          "symbol": "MSFT",
+          "mint": "9RZzJPMFoPfzfG6w7CZ3PR6rVswpGtcEKWn4g1GkZ8U9",
+          "vault": "9ydQjGJxRSGUDAsGtR2mbrJP5CqLQg4qYyzzfrnM15RP",
+          "priceFeed": "CwoHiWFZRnKieV33ob41nAuoQhW5SfHB81gNVhmQevHq",
+          "targetBps": 1429
+        },
+        {
+          "symbol": "GOOGL",
+          "mint": "BFPEe2PWtvRmNdXWEMeM8j5tiKaPgxD1M1adMw4apxba",
+          "vault": "DeE34ESLUWz8SWhHoinoK2cdVFT8RKKdNRBHh6xjdebq",
+          "priceFeed": "69iCPmw1FVPSd6HrapqQcBTwBKZrCQ76vMYAGi8yZiGZ",
+          "targetBps": 1429
+        },
+        {
+          "symbol": "AMZN",
+          "mint": "5r7urG4o1BHQeST5HuzsytRdnmo5PKZxBTNKzAP2Rneb",
+          "vault": "EEzWN5EMpksutuYch5iEySMgpEQUgGUu23UHy4mQgb2e",
+          "priceFeed": "9ZKrgh6phAkCpYsmBrgTYmWdZVciAkvfwggkmT9F9pCb",
+          "targetBps": 1429
+        },
+        {
+          "symbol": "NVDA",
+          "mint": "H5fT3UtbCviJyrPAQQQGzecJhZdaQ5iUbSb4fsx6kcD8",
+          "vault": "5yhuGf3VfSLiZDxbPcQKC99AGuN7C2Mu6kkhQLpPJeQk",
+          "priceFeed": "GFQ34NZAaWZjWwGEf6hox78wy6ramUnUXmsW6NFPHC99",
+          "targetBps": 1428
+        },
+        {
+          "symbol": "META",
+          "mint": "25SCJ8qVBe9ZLFagkbLGyggyM8mrZrHEu85Z2ugfRJJY",
+          "vault": "5hTDfSogMtsE9NQ59HGfQaCEeJzkYTzXQ4GF3rVBjkCF",
+          "priceFeed": "76XqA3WCy7GhGMmmnFaNGWd5QMkqGCGsvYbMSDFFoV7H",
+          "targetBps": 1428
+        },
+        {
+          "symbol": "TSLA",
+          "mint": "9mAaj6k2iRbX7MLy2Hgc6zvseL69XxxNa5RDw1mHd7pX",
+          "vault": "3bCReZRv8TkK4dLrs3kri1s3JnXxKZ5synnxVQkUHN3X",
+          "priceFeed": "C5diku4mwq5TgXmo1fmZsaetoKEUQy64ARMLTXz6658L",
+          "targetBps": 1428
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Memory & Semis",
+      "address": "5cUoftrmCVJLTg3odQzhmZu6GNnUpfvCsA7A1VWz2MQ1",
+      "shareMint": "E7k91jNsPYw3NtsBwE9QcUz3wCUYgwRoVRw8HGM28ux6",
+      "usdcVault": "7ayKvQgL8XLncayjK95EpN6kd65qwgCqy1EJULViYvis",
+      "components": [
+        {
+          "symbol": "MU",
+          "mint": "HKPKibCtJH276W1BEbFau6ofyvSRtqGHde9FDiHxyEh8",
+          "vault": "5nAqsYUNZbuQZ4pdGYrYc1QiyQm199NyzsR2TK1sgCrR",
+          "priceFeed": "BoworthuGD9EkueKZSNQo47i6upREmDm896qsEffD1w8",
+          "targetBps": 4000
+        },
+        {
+          "symbol": "SNDK",
+          "mint": "DgBHRHATfGAcvJgH4raX1jcRTvjQt9wZGykHwAVYfa1p",
+          "vault": "2iXjN4qU9rcjrk8v9K6x9V1kgpgA4LeU7ee1FdV8azfV",
+          "priceFeed": "FgB6iShRacGcMtoPUH9QuBQcG3Er2GKSUkpPgC99jRM",
+          "targetBps": 3500
+        },
+        {
+          "symbol": "SKHY",
+          "mint": "4F4yXL1jDUQQLkyQ5YSyXBpi1z3GtHd5jc8aVDMr1W8F",
+          "vault": "ANtbnxe9EFEmXMc4SnxVZPRKxvTzNZCjsUzQ4hwdM61J",
+          "priceFeed": "GanbqKVLBNkCHR4sGkTxLhqjjU9vnMxoWbEWyB3eryzQ",
+          "targetBps": 2500
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "S&P Core",
+      "address": "6LVVMMtoaAKt6CgtdiLGMbQwvurNgZ7rV1PXoULJ31mX",
+      "shareMint": "ETsdRwoXiZPLxNyD6LY13feKiscoHYdxtfYsYrakCfaX",
+      "usdcVault": "Htocd9io7ENve4KQKxgbDvvsoKBwi5jcHcd8Bc2xPiCW",
+      "components": [
+        {
+          "symbol": "SPY",
+          "mint": "AwuvVtwq94Qm6JkV6VnJB8SuGyM6BL5ZJsc4ivFYdvYg",
+          "vault": "6C3DJSiCzA1g8v8hkNiePXJnqj942XbTUmWe4VPJwDG9",
+          "priceFeed": "Hf8wmkJ4PLPyH6CeR7yCWDx4tDTgPPKj6rGfqJE4h22y",
+          "targetBps": 10000
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Space & Frontier",
+      "address": "298mCVTRC6y5KM7P6cMD18AdWRaj8c5Ho2bQGaUSavx5",
+      "shareMint": "6mmueavypfgta21ADwH8XWKRpBbYQynv5a25g9WD4iHy",
+      "usdcVault": "86MtZSmmx8udhYLptrewkkGHQ7dgcNzS6KUSdYK2t1y",
+      "components": [
+        {
+          "symbol": "SPCX",
+          "mint": "2F4Wq1QSJfo63w4iV7umcZsLQhvGKSHrttGpmtSW2tnE",
+          "vault": "85X6kKJbhtTf4a5cwUPiLw1EMiRvinde29zEV2keJyUX",
+          "priceFeed": "E6Tr9kGHepgfhcxoKRainARQgx9UzdXdS3oL8kAPW3yX",
+          "targetBps": 5000
+        },
+        {
+          "symbol": "RKLB",
+          "mint": "2ViidbsQKaobfZHpGT82uqkEJ7CW6vWzjH6WLJmeqSTp",
+          "vault": "Es16eh6ooa1GmS1Wb69Wv29wAkpRzKerTGYFfGnVb3qG",
+          "priceFeed": "A7VAgJyRphgx6jmgVcBe5FV8FTCX3vpD8hxBNaQJqKe3",
+          "targetBps": 2500
+        },
+        {
+          "symbol": "ASTS",
+          "mint": "GSgrTkn2C9tgYnVP9Zs23j8LokEUV36L4mRNeobpLaE",
+          "vault": "8j4eeSx5QpDEeUaaZVWhydpweBJjdiGhzYUFZWUJscRe",
+          "priceFeed": "8AMJHzrLahbUGZi7AKumxKxX4EjUvc746u4CBVob4fCD",
+          "targetBps": 2500
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-11-25T08:56:36.739Z"
+}

@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- design tokens: every colour in the UI comes from these ---- */
+:root {
+  --canvas: #f4f6fa;
+  --surface: #ffffff;
+  --panel: #ffffff;
+  --elevated: #edf1f7;
+  --brand: #6558f5;
+  --brand-strong: #5446e0;
+  --accent: #168fb5;
+  --up: #149b73;
+  --down: #e34f67;
+  --warn: #b7791f;
+  --ink: #172033;
+  --soft: #667085;
+  --muted: #98a2b3;
+  --line: #e2e7ef;
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.04);
+  --chart-grid: #e8ecf3;
+  color-scheme: light;
+}
+.dark {
+  --canvas: #101827;
+  --surface: #141f30;
+  --panel: #182438;
+  --elevated: #202e43;
+  --brand: #6558f5;
+  --brand-strong: #7a6ff7;
+  --accent: #35c6e8;
+  --up: #42d6a4;
+  --down: #ff647c;
+  --warn: #f2b84b;
+  --ink: #f4f6fa;
+  --soft: #aab6c8;
+  --muted: #718096;
+  --line: #2a3950;
+  --shadow: none;
+  --chart-grid: #243349;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-jbmono), ui-monospace, "SF Mono", Menlo, monospace;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-panel: var(--panel);
+  --color-elevated: var(--elevated);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-strong);
+  --color-accent: var(--accent);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-warn: var(--warn);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+}
+
+html,
+body {
+  background: var(--canvas);
+  color: var(--ink);
+}
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* range slider */
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--brand) var(--pct, 0%), var(--elevated) var(--pct, 0%));
+}
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--panel);
+  border: 2px solid var(--brand);
+  cursor: pointer;
+}
+input[type="range"].slider::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--panel);
+  border: 2px solid var(--brand);
+  cursor: pointer;
+}
+
+/* ---- wallet-adapter button + modal, themed ---- */
+.wallet-adapter-button {
+  font-family: var(--font-sans) !important;
+  height: 38px !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  background-color: var(--brand) !important;
+  color: #fff !important;
+  padding: 0 14px !important;
+}
+.wallet-adapter-button:hover:not([disabled]) {
+  background-color: var(--brand-strong) !important;
+}
+.wallet-adapter-dropdown-list {
+  background: var(--elevated) !important;
+  border: 1px solid var(--line);
+}
+.wallet-adapter-dropdown-list-item {
+  color: var(--ink) !important;
+}
+.wallet-adapter-modal-wrapper {
+  background: var(--panel) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line);
+  border-radius: 16px !important;
+}
+.wallet-adapter-modal-title,
+.wallet-adapter-modal-list .wallet-adapter-button {
+  color: var(--ink) !important;
+}
+.wallet-adapter-modal-list .wallet-adapter-button {
+  background: transparent !important;
+}
+.wallet-adapter-modal-list .wallet-adapter-button:hover:not([disabled]) {
+  background: var(--elevated) !important;
+}
+.wallet-adapter-modal-button-close {
+  background: var(--elevated) !important;
+}
+.wallet-adapter-modal-button-close svg {
+  fill: var(--ink) !important;
+}
+.wallet-adapter-modal-list-more {
+  color: var(--soft) !important;
+}

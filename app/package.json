@@ -1,0 +1,36 @@
+{
+  "name": "baska-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "sync-config": "node scripts/sync-config.mjs",
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "typecheck": "tsc --noEmit",
+    "check:devnet": "ts-node -P tsconfig.scripts.json scripts/devnet-check.ts"
+  },
+  "dependencies": {
+    "@anchor-lang/core": "^1.2.1",
+    "@solana/spl-token": "^0.4.9",
+    "@solana/wallet-adapter-base": "^0.9.28",
+    "@solana/wallet-adapter-react": "^0.15.40",
+    "@solana/wallet-adapter-react-ui": "^0.9.40",
+    "@solana/web3.js": "^1.99.0",
+    "@tanstack/react-query": "^5.90.0",
+    "lucide-react": "^1.80.0",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "recharts": "^3.11.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.0"
+  }
+}

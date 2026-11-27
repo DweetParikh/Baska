@@ -1,0 +1,22 @@
+{"t":"2026-11-25T09:03:09.282Z","level":"info","msg":"faucet enabled","amountUsdc":1000,"cooldownS":3600}
+{"t":"2026-11-25T09:03:49.104Z","level":"info","msg":"backfill complete","transactions":25}
+{"t":"2026-11-25T09:04:07.914Z","level":"info","msg":"api listening","port":3001,"cluster":"devnet"}
+{"t":"2026-11-25T09:05:24.976Z","level":"info","msg":"backfill complete","transactions":15}
+{"t":"2026-11-25T09:07:29.205Z","level":"info","msg":"backfill complete","transactions":14}
+{"t":"2026-11-25T09:07:33.659Z","level":"warn","msg":"skipping NAV snapshot: stale oracle","fundId":1,"ageSecs":57}
+{"t":"2026-11-25T09:08:11.162Z","level":"info","msg":"backfill complete","transactions":16}
+{"t":"2026-11-25T09:08:42.512Z","level":"info","msg":"backfill complete","transactions":9}
+{"t":"2026-11-25T09:09:16.513Z","level":"info","msg":"backfill complete","transactions":4}
+{"t":"2026-11-25T09:09:40.551Z","level":"info","msg":"backfill complete","transactions":5}
+{"t":"2026-11-25T09:10:09.526Z","level":"info","msg":"backfill complete","transactions":3}
+{"t":"2026-11-25T09:10:41.027Z","level":"info","msg":"backfill complete","transactions":6}
+{"t":"2026-11-25T09:11:09.526Z","level":"info","msg":"backfill complete","transactions":3}
+{"t":"2026-11-25T09:11:41.029Z","level":"info","msg":"backfill complete","transactions":6}
+{"t":"2026-11-25T09:12:09.535Z","level":"info","msg":"backfill complete","transactions":3}
+{"t":"2026-11-25T09:12:41.043Z","level":"info","msg":"backfill complete","transactions":6}
+{"t":"2026-11-25T09:13:09.546Z","level":"info","msg":"backfill complete","transactions":3}
+{"t":"2026-11-25T09:13:42.271Z","level":"info","msg":"backfill complete","transactions":6}
+{"t":"2026-11-25T09:14:16.511Z","level":"info","msg":"backfill complete","transactions":4}
+{"t":"2026-11-25T09:14:40.546Z","level":"info","msg":"backfill complete","transactions":5}
+{"t":"2026-11-25T09:15:24.836Z","level":"info","msg":"backfill complete","transactions":6}
+{"t":"2026-11-25T09:15:41.550Z","level":"info","msg":"backfill complete","transactions":7}

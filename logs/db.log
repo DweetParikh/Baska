@@ -1,0 +1,5 @@
+
+> api:dev-db
+> ts-node -P ./tsconfig.json api/scripts/dev-db.ts
+
+embedded postgres ready: postgresql://postgres:postgres@127.0.0.1:5433/postgres

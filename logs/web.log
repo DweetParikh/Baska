@@ -1,0 +1,9 @@
+
+> baska-app@0.1.0 start
+> next start -p 3000
+
+▲ Next.js 16.4.6
+- Local:         http://localhost:3000
+- Network:       http://10.255.255.254:3000
+✓ Ready in 151ms
+✓ Running next.config.ts took 107ms

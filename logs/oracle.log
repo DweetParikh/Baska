@@ -1,0 +1,10 @@
+
+> oracle
+> ts-node -P ./tsconfig.json scripts/price-updater.ts
+
+{"t":"2026-11-27T10:26:20.628Z","level":"info","msg":"price updater started","source":"yahoo→simulated","intervalS":20,"feeds":14,"simulated":true}
+{"t":"2026-11-27T10:26:30.594Z","level":"info","msg":"prices published","feeds":14,"sample":{"AAPL":355.58,"MSFT":489.93,"GOOGL":273.1}}
+{"t":"2026-11-27T10:26:52.243Z","level":"info","msg":"prices published","feeds":14,"sample":{"AAPL":355.58,"MSFT":489.93,"GOOGL":273.1}}
+{"t":"2026-11-27T10:27:10.542Z","level":"info","msg":"prices published","feeds":14,"sample":{"AAPL":355.58,"MSFT":489.93,"GOOGL":273.1}}
+{"t":"2026-11-27T10:27:32.172Z","level":"info","msg":"prices published","feeds":14,"sample":{"AAPL":355.58,"MSFT":489.93,"GOOGL":273.1}}
+{"t":"2026-11-27T10:27:53.483Z","level":"info","msg":"prices published","feeds":14,"sample":{"AAPL":355.58,"MSFT":489.93,"GOOGL":273.1}}

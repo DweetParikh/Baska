@@ -1,0 +1,13 @@
+
+> keeper
+> ts-node -P ./tsconfig.json keeper/src/index.ts
+
+{"t":"2026-11-25T12:04:15.971Z","level":"info","msg":"keeper started","keeper":"7s8h584tuxijP8jYDkxZm1azwK9qVbxhGHiizJJPitFK","dryRun":false,"opts":"{\"minIdleUsdc\":\"10000000\",\"maxTradeUsdc\":\"5000000000\",\"driftToleranceBps\":500,\"slippageBps\":50,\"venueFeeBps\":10}"}
+{"t":"2026-11-25T12:04:15.974Z","level":"info","msg":"health endpoint on :8787/keeper/health"}
+{"t":"2026-11-25T12:04:20.471Z","level":"info","msg":"swap sent","fund":4,"kind":"buy","component":0,"amountIn":"500000000","minOut":"395042126","reason":"deploy idle USDC into underweight component 0","sig":"5q74rX1adhNCPnwkVXuEafEeiVrdBQFtwLqBrcN7y1vXQeAKgLEYVypmEW42rbWcV3WwyJ64gv7cutdcWh2UauyP"}
+{"t":"2026-11-25T12:04:24.421Z","level":"info","msg":"swap sent","fund":2,"kind":"buy","component":0,"amountIn":"400000000","minOut":"63132471","reason":"deploy idle USDC into underweight component 0","sig":"5JnzsayMRHJGzQiHJ9FJJ4ArNP615RVZ9p1TrnUaVsinG5Hj5cHwFXviBkHXqGnSbUaBzyqSSm8zzHKDEEcDdwsV"}
+{"t":"2026-11-25T12:04:29.719Z","level":"info","msg":"swap sent","fund":3,"kind":"buy","component":0,"amountIn":"1260000040","minOut":"174246129","reason":"deploy idle USDC into underweight component 0","sig":"6VSQJKic8qdkKnzhvH6boE31y2SrpC4XQhkcZJ1KvK6PzYLeG32jFuJQcDbMWFEtpxvL8v5oC27p38KKYchwCki"}
+{"t":"2026-11-25T12:05:36.126Z","level":"info","msg":"swap sent","fund":4,"kind":"buy","component":1,"amountIn":"249874999","minOut":"540184859","reason":"deploy idle USDC into underweight component 1","sig":"Fu3GbnGXNWcFRtm8R1MxAnEwSWv6aMnZPk9VfxmzGttz9wsMSTAF1BidHuDwk8EghqhiHn2TTc266dSf8pkD5D9"}
+{"t":"2026-11-25T12:05:40.197Z","level":"info","msg":"swap sent","fund":2,"kind":"buy","component":1,"amountIn":"349859996","minOut":"446135451","reason":"deploy idle USDC into underweight component 1","sig":"3hJX4yaSyJBz1vjwiyP7wdDKDjt9kQsMsFLZXV4Jdj57G4UXRWMwjhH22BoqcLWgY2vFQBcgvwHL4wntekSmZCNN"}
+{"t":"2026-11-25T12:06:52.614Z","level":"info","msg":"swap sent","fund":4,"kind":"buy","component":2,"amountIn":"249812530","minOut":"1052181795","reason":"deploy idle USDC into underweight component 2","sig":"2ZpErrQmQRVofcNxGYz31NJdRdvD7jFRsJkFRzxtwtPeE16QXxtY2hgnJNkJCLpcdHQFW26eeGC5CNfMCzGSUmug"}
+{"t":"2026-11-25T12:06:56.716Z","level":"info","msg":"swap sent","fund":2,"kind":"buy","component":2,"amountIn":"249812532","minOut":"221749334","reason":"deploy idle USDC into underweight component 2","sig":"abLaXQBVefEjykJVd7oLuoxNqZQ8PcVJRMAJALueZRQSBXvAkaFhwJbxL2bXi1oDKysqGqYXzRyNLXqhwLR6QAZ"}

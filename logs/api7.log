@@ -1,0 +1,7 @@
+{"t":"2026-11-25T11:52:28.869Z","level":"info","msg":"faucet enabled","amountUsdc":1000,"cooldownS":3600}
+{"t":"2026-11-25T11:52:47.934Z","level":"info","msg":"backfill complete","transactions":15}
+{"t":"2026-11-25T11:52:57.755Z","level":"info","msg":"api listening","port":3001,"cluster":"devnet"}
+{"t":"2026-11-25T11:53:45.880Z","level":"info","msg":"backfill complete","transactions":11}
+{"t":"2026-11-25T11:54:36.219Z","level":"info","msg":"backfill complete","transactions":11}
+{"t":"2026-11-25T11:55:13.604Z","level":"info","msg":"backfill complete","transactions":12}
+{"t":"2026-11-25T11:55:29.849Z","level":"info","msg":"backfill complete","transactions":4}

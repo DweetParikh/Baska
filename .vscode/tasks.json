@@ -1,0 +1,107 @@
+{
+  // Run: Ctrl+Shift+P -> "Tasks: Run Task" -> "Baska: start all".
+  // Each service gets its own terminal tab; a task is "ready" when its log line matches endsOn.
+  // Open this folder through the WSL extension (see README) so these run inside Ubuntu.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "redis",
+      "type": "shell",
+      "command": "redis-cli ping >/dev/null 2>&1 || sudo service redis-server start || redis-server --daemonize yes; redis-cli ping",
+      "presentation": { "group": "baska", "reveal": "silent", "panel": "shared" },
+      "problemMatcher": []
+    },
+    {
+      "label": "oracle (price updater)",
+      "type": "shell",
+      "command": "npm run oracle",
+      "isBackground": true,
+      "presentation": { "group": "baska", "panel": "dedicated", "reveal": "silent" },
+      "problemMatcher": {
+        "pattern": { "regexp": "^$" },
+        "background": { "activeOnStart": true, "beginsPattern": "price updater started", "endsPattern": "prices published" }
+      }
+    },
+    {
+      "label": "database",
+      "type": "shell",
+      "command": "npm run api:dev-db",
+      "isBackground": true,
+      "presentation": { "group": "baska", "panel": "dedicated", "reveal": "silent" },
+      "problemMatcher": {
+        "pattern": { "regexp": "^$" },
+        "background": { "activeOnStart": true, "beginsPattern": "^$", "endsPattern": "embedded postgres ready" }
+      }
+    },
+    {
+      "label": "api",
+      "type": "shell",
+      "command": "npm run api",
+      "isBackground": true,
+      "options": {
+        "env": {
+          "DATABASE_URL": "postgresql://postgres:postgres@127.0.0.1:5433/postgres",
+          "DB_POOL_MAX": "1",
+          "RPC_URL": "https://api.devnet.solana.com",
+          "REDIS_URL": "redis://127.0.0.1:6379",
+          "CLUSTER": "devnet",
+          "PORT": "3001",
+          "CORS_ORIGIN": "http://localhost:3000",
+          "FAUCET_KEYPAIR": "${workspaceFolder}/keys/faucet.json",
+          "SYMBOLS_FILE": "${workspaceFolder}/deployments/devnet.symbols.json"
+        }
+      },
+      "presentation": { "group": "baska", "panel": "dedicated", "reveal": "silent" },
+      "problemMatcher": {
+        "pattern": { "regexp": "^$" },
+        "background": { "activeOnStart": true, "beginsPattern": "^$", "endsPattern": "api listening" }
+      }
+    },
+    {
+      "label": "keeper",
+      "type": "shell",
+      "command": "npm run keeper",
+      "isBackground": true,
+      "options": { "env": { "RPC_URL": "https://api.devnet.solana.com", "KEEPER_KEYPAIR": "keys/keeper.json" } },
+      "presentation": { "group": "baska", "panel": "dedicated", "reveal": "silent" },
+      "problemMatcher": {
+        "pattern": { "regexp": "^$" },
+        "background": { "activeOnStart": true, "beginsPattern": "^$", "endsPattern": "keeper started" }
+      }
+    },
+    {
+      "label": "web (next dev)",
+      "type": "shell",
+      "command": "npm run sync-config && npm run dev",
+      "isBackground": true,
+      "options": { "cwd": "${workspaceFolder}/app" },
+      "presentation": { "group": "baska", "panel": "dedicated", "reveal": "always" },
+      "problemMatcher": {
+        "pattern": { "regexp": "^$" },
+        "background": { "activeOnStart": true, "beginsPattern": "^$", "endsPattern": "Ready in" }
+      }
+    },
+    {
+      "label": "Baska: start all",
+      "dependsOn": ["redis", "oracle (price updater)", "database", "api", "keeper", "web (next dev)"],
+      "dependsOrder": "sequence",
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Baska: stop all",
+      "type": "shell",
+      "command": "bash scripts/stop-all.sh",
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Baska: run tests",
+      "type": "shell",
+      "command": "anchor test --skip-build && npm run test:keeper",
+      "options": { "env": { "NO_DNA": "1" } },
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "problemMatcher": []
+    }
+  ]
+}

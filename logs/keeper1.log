@@ -1,0 +1,5 @@
+
+> keeper
+> ts-node -P ./tsconfig.json keeper/src/index.ts
+
+{"t":"2026-11-25T12:03:06.038Z","level":"error","msg":"fatal","error":"fetch failed"}
