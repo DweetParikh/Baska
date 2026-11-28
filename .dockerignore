@@ -1,0 +1,12 @@
+node_modules
+app/node_modules
+app/.next
+target
+keys
+logs
+api/.pgdata
+api/src/generated
+.anchor
+test-ledger
+.env
+.git
