@@ -76,19 +76,30 @@ async function main() {
     faucet,
   });
 
+  // Listen before the initial sync: on a fresh database the chain replay can take minutes, and the
+  // host (and the web app) should get /health and partial data meanwhile.
+  await app.listen({ port: cfg.PORT, host: "0.0.0.0" });
+  log("info", "api listening", { port: cfg.PORT, cluster: cfg.CLUSTER });
+
   // Subscribe first, then backfill: anything in the gap is covered because processing is idempotent.
   indexer.start();
+  let backfilling = true;
   // Non-fatal: on a rate-limited RPC the first pass can fail; the periodic backfill retries.
-  try {
-    await indexer.backfill();
-    await snapshotter.snapshotAll();
-  } catch (e: any) {
-    log("warn", "initial sync incomplete, will retry", { error: String(e?.message ?? e).split("\n")[0] });
-  }
+  (async () => {
+    try {
+      log("info", "initial sync started");
+      await indexer.backfill();
+      await snapshotter.snapshotAll();
+      log("info", "initial sync done");
+    } catch (e: any) {
+      log("warn", "initial sync incomplete, will retry", { error: String(e?.message ?? e).split("\n")[0] });
+    } finally {
+      backfilling = false;
+    }
+  })();
   snapshotter.start(cfg.SNAPSHOT_INTERVAL_MS);
 
   // Safety net for dropped websockets (common on public RPC): periodically re-read from the cursor.
-  let backfilling = false;
   const backfillTimer = setInterval(async () => {
     if (backfilling) return;
     backfilling = true;
@@ -100,9 +111,6 @@ async function main() {
       backfilling = false;
     }
   }, cfg.BACKFILL_INTERVAL_MS);
-
-  await app.listen({ port: cfg.PORT, host: "0.0.0.0" });
-  log("info", "api listening", { port: cfg.PORT, cluster: cfg.CLUSTER });
 
   const shutdown = async () => {
     clearInterval(backfillTimer);
